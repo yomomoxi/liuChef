@@ -1,0 +1,21 @@
+<!--components/myHeader/myHeader.wxml-->
+
+<view class="header"> 
+<!-- 头像 -->
+<view class="header-image"> 
+  <van-image
+   round
+  width="4rem"
+  height="4rem"
+  fit="cover"
+  src="https://img.yzcdn.cn/vant/cat.jpeg"
+/>
+
+
+</view>
+<!-- 类型 -->
+<view class="header-text"> 刘师傅家常小炒</view>
+
+</view>
+
+

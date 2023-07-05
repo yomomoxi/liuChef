@@ -1,0 +1,10 @@
+{
+
+  "usingComponents": {
+    "van-image": "@vant/weapp/image/index",
+    "my-header":"/components/myHeader/myHeader",
+    "my-body":"/components/myBody/myBody"
+
+  }
+  
+ }

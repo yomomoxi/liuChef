@@ -1,0 +1,20 @@
+/* components/myHeader/myHeader.wxss */
+
+.header {
+  width: 100%;
+  height: 8rem;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+.header-image{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  flex: 1;
+}
+.header-text{
+  display: flex;
+  flex: 3;
+  margin-top: 2rem;
+}

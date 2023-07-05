@@ -1,0 +1,76 @@
+<!--components/body/body.wxml-->
+<!-- 订单 功能-->
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="当月主推">内容 1</van-tab>
+
+  <van-tab title="菜单">
+
+    <!-- 左侧 -->
+    <view class="left-body">
+      <van-sidebar active-key="{{ activeKey }}" bind:change="sidebarChange">
+        <van-sidebar-item wx:for="{{items}}"  wx:key="id" title="{{item.text}}"></van-sidebar-item>
+      </van-sidebar>
+      <!-- 右侧 -->
+      <view class="right-body">
+        <van-card wx:for='{{children}}' wx:key="id"  price="{{item.price}}" desc="月售{{item.monthlySales}}" title="{{item.text}}" thumb="{{ item.image }}">
+          <view slot="footer">
+            <van-button size="mini" type="danger" bind:click="changeSize" >选规格</van-button>
+          </view>
+
+          <!-- 大于0的时候显示订单 和加减数字 -->
+        </van-card>
+      </view>
+
+    </view>
+
+  </van-tab>
+<!-- 选择内容 -->
+<van-popup show="{{ show }}" bind:close="onClose"  closeable  round   custom-style="height: 60%;"  position="bottom">
+
+<!-- 图片 名称 价格 -->
+<view class="particulars" wx:for="{{particulars}}" wx:key="id">
+<view class="particulars-img">
+  <image class="img" mode='aspectFill'  src='{{item.img}}'></image>
+</view>
+<view class="content">
+<view class="particulars-text" > 
+{{item.name}}
+</view>
+<view class="particulars-price">
+  ¥ {{item.price}}
+</view>
+</view>
+</view>
+<!-- 虚线-->
+<view class="borders"></view>
+
+<!-- 辣度 -->
+<view class="scoville-body"> 
+
+<view style="font-size: 13px;font-weight:bold; ">辣度</view>
+<view class="scoville" wx:for="{{scoville}}" wx:key="id"> 
+  <van-button size="small" customClass="myclass" type="default">{{item.hot}}</van-button>
+</view>
+</view>
+
+<view class="borders"></view>
+
+<!-- 购买数量 -->
+<view class="nums">
+<view class="quantity">购买数量</view>
+<!-- 加减 -->
+  <van-button icon="minus" hairline customClass="my-minus"  type="default"   bind:click="minusValues" />
+  <view class="amount">{{value}}</view>
+  <van-button icon="plus" hairline customClass="my-plus"  type="danger" bind:click="plusValues"  />
+
+</view>
+<view class="borders"></view>
+
+<!-- 确认 -->
+<view class="sumbit">
+  <van-button type="danger" customClass="sumbitButton">确认</van-button>
+</view>
+    </van-popup>
+
+
+</van-tabs>
