@@ -6,8 +6,8 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ff976a",
+    "navigationBarTitleText": "刘师傅快餐店",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

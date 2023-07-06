@@ -68,9 +68,22 @@
 
 <!-- 确认 -->
 <view class="sumbit">
-  <van-button type="danger" customClass="sumbitButton">确认</van-button>
+  <van-button type="danger" customClass="sumbitButton" bind:click="sumbitOrder">确认</van-button>
 </view>
     </van-popup>
+  
 
+  <!-- 购物车 -->
+<!-- 底部  -->
+<van-submit-bar
+wx:if="{{!show&&totalPrice!==0}}"
+  price="{{totalPrice}}"
+  button-text="提交订单"
+>
+<!-- <van-icon name="shopping-cart-o" color="red" size="30px"  /> -->
+  <!-- <van-button  type="default" icon="chat" color="red"  >标签</van-button> -->
+</van-submit-bar>
+
+  
 
 </van-tabs>

@@ -5,8 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    active: 1,
   },
+ // 更改tabs
+ onChange(){
+
+ },
 
   /**
    * 生命周期函数--监听页面加载
@@ -19,14 +23,21 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+ 
   },
-
+  sumbitOrder(){
+    wx.switchTab({
+      url: '/pages/index/index',
+    })
+    // wx.navigateTo({
+    //   url: '/pages/index/index',
+    // })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+ 
   },
 
   /**

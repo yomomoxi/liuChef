@@ -11,6 +11,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    totalPrice:0,
     show:  false,
     value: 1,
     active: 1,
@@ -93,7 +94,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
     onClickNav({
       detail = {}
     }) {
@@ -106,11 +106,14 @@ Component({
         show: false
       });
     },
-    changeSize() {
+    changeSize(evet) {
       // 对应的id 然后显示对应的内容 
       this.setData({
         show: true
       });
+      console.log(evet)
+  // 隐藏系统默认的tabbar
+     wx.hideTabBar();
     },
     minusValues(e){
     console.log(this.data.value)
@@ -164,6 +167,16 @@ Component({
       // console.log(event)
     },
 
+//  确定选中的餐品
+sumbitOrder(){
+  // value的值乘以价格particulars.price=totalPrice
+  this.setData({
+    totalPrice:2000,
+    show:false
+  });
+  // wx.showTabBar()
 
+}
   }
 })
+
