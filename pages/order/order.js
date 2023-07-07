@@ -6,6 +6,31 @@ Page({
    */
   data: {
     active: 1,
+    money:220, //付款金额
+    orderHistory:[
+      {     tableNumber:'A06',
+             orderTime:"2023-05-21 17:36:39",
+             payment:"251",
+             id:1,
+             particulars:[
+               {
+              dishes: "宫保虾球",
+              quantity:"2",
+              amount:66.00
+             },
+             {
+              dishes: "钵钵鸡",
+              quantity:"1",
+              amount:39.00
+             },
+             {
+              dishes: "回锅肉",
+              quantity:"1",
+              amount:33.00
+             }
+            ]
+      
+    }]
   },
  // 更改tabs
  onChange(){
