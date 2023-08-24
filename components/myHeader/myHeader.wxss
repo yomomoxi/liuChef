@@ -18,3 +18,13 @@
   flex: 3;
   margin-top: 2rem;
 }
+.merchant{
+text-align: center;
+
+}
+.name{
+  padding: 0 1rem;
+}
+.Style-cuisine{
+  font-size: small;
+}

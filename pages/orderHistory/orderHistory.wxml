@@ -1,0 +1,35 @@
+<!--pages/orderHistory/orderHistory.wxml-->
+  
+<view>
+    <view  class="colors">
+  <view wx:for="{{orderHistory}}" wx:key="id" wx:for-item="item" wx:for-index='i'>
+    <van-row class="table">   
+    <!-- 桌号 -->
+  <van-col span="4" style="font-weight: bold;">{{item.tableNumber}}</van-col>
+  <van-col  span="19" class="no-wrap">下单时间:{{item.orderTime}}</van-col>
+</van-row>
+
+<!-- 菜品内容 -->
+<van-row>
+  <van-col span="13" customClass="my-particulars">菜品</van-col>
+  <van-col span="5" customClass="my-particulars">数量</van-col>
+  <van-col span="5" customClass="my-particulars">金额</van-col>
+</van-row>
+<view class="borders"></view>
+<!-- 菜品详情 -->
+<van-row  wx:for="{{item.particulars}}" wx:key="dishes" wx:for-item="item1" >
+  <van-col customClass="my-particulars"  span="13">{{item1.dishes}}</van-col>
+  <van-col customClass="my-particulars" span="5">x{{item1.quantity}}</van-col>
+  <van-col customClass="my-particulars" span="5">¥{{item1.amount}}</van-col>
+</van-row>
+</view>
+
+</view>
+<view  class="colors">
+<van-row  wx:for="{{orderHistory}}" wx:key="id">
+  <van-col span="19">实付金额:</van-col>
+  <van-col span="3" style="font-size: 1rem;font-weight: bold;">{{item.payment}}</van-col>
+</van-row>
+</view>
+
+  </view>

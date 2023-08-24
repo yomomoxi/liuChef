@@ -1,13 +1,10 @@
-// pages/order.js
+// pages/orderHistory/orderHistory.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    active: 1,
-    money:220, //付款金额
-    showFinish:false,
     orderHistory:[
       {     tableNumber:'A06',
              orderTime:"2023-05-21 17:36:39",
@@ -33,11 +30,6 @@ Page({
       
     }]
   },
- // 更改tabs
- onChange(){
-
- },
-
 
   /**
    * 生命周期函数--监听页面加载
@@ -50,27 +42,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
- 
-  },
-  detailPage(){
-    wx.navigateTo({
-      url: "/pages/orderHistory/orderHistory",
-    })
-  },
-  sumbitOrder(){
-    wx.switchTab({
-      url: '/pages/index/index',
-    })
-    // wx.navigateTo({
-    //   url: '/pages/index/index',
-    // })
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
- 
+
   },
 
   /**

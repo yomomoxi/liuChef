@@ -1,6 +1,6 @@
 <!--components/myHeader/myHeader.wxml-->
 
-<view class="header"> 
+<view class="header" bindtap="handleTap"> 
 <!-- 头像 -->
 <view class="header-image"> 
   <van-image
@@ -18,4 +18,50 @@
 
 </view>
 
+
+
+<van-popup
+  show="{{ show }}"  round   custom-style="height: 60%;"  position="bottom" bind:close="onClose" 
+>
+<!-- 商家信息 -->
+<view class="merchant">
+<view style="margin:10px"  bindtap="onClose" >
+  <van-icon name="arrow-down" size="20px"  />
+</view>
+<!-- 头像 -->
+<view>
+  <van-image
+  width="80"
+  height="80"
+  round
+  src="https://img.yzcdn.cn/vant/cat.jpeg"
+/>
+</view>
+<view style="margin:0.5rem"> </view>
+<!-- 名称 -->
+<view class="name">军休餐厅 | 鹿泉店</view>
+<view style="margin:0.5rem"> </view>
+<!-- 菜系 -->
+<view class="Style-cuisine"> 家常小炒</view>
+<view style="margin:0.5rem"> </view>
+</view>
+<!-- 电话 -->
+<!-- 地址 -->
+<van-cell
+icon="phone-o"
+  is-link
+  title="15252451373"
+  link-type="navigateTo"
+  url="/pages/dashboard/index"
+/>
+
+<van-cell
+icon="location-o"
+  is-link
+  title="江苏省南京市江宁区秫陵街道汇金新天地广场刘师傅家常小炒"
+  link-type="navigateTo"
+  url="/pages/dashboard/index"
+/>
+
+</van-popup>
 

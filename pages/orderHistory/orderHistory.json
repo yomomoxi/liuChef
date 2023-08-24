@@ -5,8 +5,6 @@
     "van-button": "@vant/weapp/button/index",
     "van-row": "@vant/weapp/row/index",
     "van-col": "@vant/weapp/col/index",
-     "van-tag": "@vant/weapp/tag/index",
-     "van-image": "@vant/weapp/image/index"
-
+    "van-image": "@vant/weapp/image/index"
   }
 }
